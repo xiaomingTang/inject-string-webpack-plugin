@@ -29,7 +29,7 @@ interface Options {
  * 比如说开发 ps 插件的时候, 用 webpack 将项目打包为 ES3, 并且需要在文件顶部添加一些垫片类的代码
  * 比如说用于 tampermonkey 时, 需要往文件顶部以注释的形式添加项目元信息描述
  */
-export default class InjectStringWebpackPlugin implements WebpackPluginInstance {
+export class InjectStringWebpackPlugin implements WebpackPluginInstance {
   config: Options;
 
   constructor(options: Options = {}) {

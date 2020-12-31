@@ -15,7 +15,7 @@ yarn add -D inject-string-webpack-plugin
 ## usage
 ``` javascript
 // webpack.config.js
-const InjectStringWebpackPlugin = require("inject-string-webpack-plugin")
+const { InjectStringWebpackPlugin } = require("inject-string-webpack-plugin")
 
 module.exports = {
   // ...
