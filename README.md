@@ -1,4 +1,5 @@
 # inject-string-webpack-plugin
+模板来自 [quick-scaffold](https://github.com/xiaomingTang/quick-scaffold) -> [node package](https://github.com/xiaomingTang/quick-scaffold/template-package-node/README.md)
 
 ## descriptions
 本插件用于往最终生成的 assets 文件中添加前/后缀, 一般用不上, 但是在一些很奇怪的场合能用上
@@ -23,12 +24,12 @@ module.exports = {
     new InjectStringWebpackPlugin({
       /**
        * 一个正则, 用于对每个最终生成的文件的 "filename" 进行测试
-       * 
+       *
        * 满足该正则的文件将会被添加上 prefix 和 suffix
-       * 
+       *
        * 注意, 这里的 filename, 其实是最终生成文件相对于 webpack.Configuration.output.path 的相对路径
        */
-      test: /static[/\\]scripts[/\\]index\..*js/g,
+      test: /scripts[/\\].+\.js$/g,
 
       prefix: `
         // prefix here
